@@ -22,14 +22,14 @@ const step = ref(Step.Expirience)
 </template>
 
 <style lang="scss">
-* {
-  overscroll-behavior: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
+// * {
+//   overscroll-behavior: none;
+//   scrollbar-width: none;
+//   -ms-overflow-style: none;
+// }
 
-*::-webkit-scrollbar {
-    display: none;
-    /* for Chrome, Safari, and Opera */
-}
+// *::-webkit-scrollbar {
+//     display: none;
+//     /* for Chrome, Safari, and Opera */
+// }
 </style>

@@ -46,6 +46,7 @@ function play() {
         showOverlay.value = false
     });
     window.onmousemove = scroll;
+    window.ondeviceorientation = touch;
     video.value?.play();
 }
 
@@ -59,6 +60,17 @@ function scroll(event: MouseEvent) {
     const scrollY = yPercentage * scrollHeight.value;
 
     gsap.to(wrapper.value, { scrollTo: { y: scrollY * 1.5, x: scrollX }, duration: 0.5 });
+}
+
+function touch(event: DeviceOrientationEvent) {
+    const x = 100 - (gsap.utils.clamp(80, 100, event.beta ?? 0) - 80) * 5;
+    const scrollX = x * (scrollHeight.value / 100);
+
+    const y = -gsap.utils.clamp(-40, 40, event.gamma ?? 0) + 40;
+    const scrollY = y * (scrollWidth.value / 100);
+
+
+    gsap.to(wrapper.value, { scrollTo: { x: scrollY, y: scrollX * 4 }, duration: 0.5 });
 }
 
 </script>
@@ -106,7 +118,7 @@ a:visited {
     overscroll-behavior: none;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
 }
 </style>
