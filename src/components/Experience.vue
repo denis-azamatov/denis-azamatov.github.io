@@ -21,9 +21,9 @@ const overlay = ref<HTMLElement | null>(null);
 const startBtn = ref<HTMLElement | null>(null);
 const scrollWidth = ref(0);
 const scrollHeight = ref(0);
+const firstTime = ref(true);
 
 const showOverlay = ref(true);
-
 
 onMounted(() => {
     const width = (video.value?.clientWidth ?? 0) - (wrapper.value?.clientWidth ?? 0);
@@ -58,17 +58,20 @@ function scroll(event: MouseEvent) {
     const y = event.clientY;
     const yPercentage = y / (wrapper.value?.clientHeight ?? 0);
     const scrollY = yPercentage * scrollHeight.value;
-
     gsap.to(wrapper.value, { scrollTo: { y: scrollY * 1.5, x: scrollX }, duration: 0.5 });
 }
 
 function touch(event: DeviceOrientationEvent) {
+    if (firstTime.value) {
+        firstTime.value = false;
+        return;
+    }
+
     const x = 100 - (gsap.utils.clamp(80, 100, event.beta ?? 0) - 80) * 5;
     const scrollX = x * (scrollHeight.value / 100);
 
     const y = -gsap.utils.clamp(-40, 40, event.gamma ?? 0) + 40;
     const scrollY = y * (scrollWidth.value / 100);
-
 
     gsap.to(wrapper.value, { scrollTo: { x: scrollY, y: scrollX * 4 }, duration: 0.5 });
 }
