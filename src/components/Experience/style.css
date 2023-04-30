@@ -1,0 +1,47 @@
+.exp {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1%;
+    gap: 5vh;
+}
+
+.experience .work,
+.experience .education {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    max-width: 40%;
+}
+
+@media screen and (max-width:720px) {
+    .exp {
+        padding-bottom: 5vh;
+    }
+
+    .experience .work,
+    .experience .education {
+        max-width: 100%;
+    }
+}
+
+.experience .name {
+    font-size: 1.5rem;
+}
+
+.experience .description {
+    opacity: 0.6;
+    padding-block: 1%;
+}
+
+.experience .description::before {
+    content: "-";
+    padding-inline-end: 1%;
+}

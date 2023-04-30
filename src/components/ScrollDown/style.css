@@ -1,0 +1,31 @@
+.scroll-down {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-down-btn {
+    width: fit-content;
+    width: 3rem;
+    padding: 16px;
+    stroke: var(--color-primary);
+    animation: scroll-move 2s ease-in infinite;
+    animation-delay: 1s;
+}
+
+@keyframes scroll-move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

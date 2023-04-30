@@ -1,0 +1,52 @@
+.contacts {
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 10vh;
+    position: relative;
+}
+
+.contacts a {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.contact-link {
+    display: flex;
+    height: 1rem;
+}
+
+.contact-link img {
+    height: 2rem;
+    padding-inline-end: 2vw;
+}
+
+.links {
+    margin: auto;
+    margin-top: 30vh;
+    padding-bottom: 30vh;
+    width: fit-content;
+    gap: 4rem;
+    row-gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width:720px) {
+    .links {
+        grid-template-columns: 1fr;
+    }
+}
+
+.download-link-bottom {
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    text-decoration: none;
+    border: 2px solid var(--color-primary);
+    padding: 1rem;
+    color: var(--color-primary);
+    border-radius: 6px;
+}

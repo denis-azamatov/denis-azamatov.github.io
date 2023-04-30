@@ -67,13 +67,13 @@ function touch(event: DeviceOrientationEvent) {
         return;
     }
 
-    const x = 100 - (gsap.utils.clamp(80, 100, event.beta ?? 0) - 80) * 5;
-    const scrollX = x * (scrollHeight.value / 100);
+    // const x = 100 - (gsap.utils.clamp(80, 100, event.beta ?? 0) - 80) * 5;
+    // const scrollX = x * (scrollHeight.value / 100);
 
-    const y = -gsap.utils.clamp(-40, 40, event.gamma ?? 0) + 40;
+    const y = 100 - (gsap.utils.clamp(-40, 40, event.gamma ?? 0) + 40) * 5;
     const scrollY = y * (scrollWidth.value / 100);
 
-    gsap.to(wrapper.value, { scrollTo: { x: scrollY, y: scrollX * 4 }, duration: 0.5 });
+    gsap.to(wrapper.value, { scrollTo: { x: scrollY}, duration: 0.5 });
 }
 
 </script>
@@ -82,6 +82,14 @@ function touch(event: DeviceOrientationEvent) {
 video {
     width: 120%;
     display: block;
+}
+
+@media screen and (max-width:820px) {
+    video {
+        width: unset;
+        height: 120%;
+        display: block;
+    }
 }
 
 .overlay {
@@ -121,7 +129,7 @@ a:visited {
     overscroll-behavior: none;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
 }
 </style>
