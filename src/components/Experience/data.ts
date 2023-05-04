@@ -32,7 +32,7 @@ const education = [
     },
     {
         name: 'University of Information Technology and Management in Rzeszow, Poland',
-        date: 'Sep 2012 - Feb 2023',
+        date: 'Sep 2022 - Feb 2023',
         description: ['Computer science']
     }
 ]
