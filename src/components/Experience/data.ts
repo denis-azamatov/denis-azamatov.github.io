@@ -1,25 +1,29 @@
 const work = [
     {
-        name: 'LLC FinanceSoft',
-        date: 'May 2021 - Nov 2021',
+        name: 'LogiSense Ltd',
+        date: 'Nov 2021 to present',
         description: [
-            'Team leader of the automated testing of the Automated Banking System.',
-            'Full-Stack developer of remote identification and lending project.'
+            'Team Lead Developer at Product Management System for entertaining events industry.',
+            'Developed a unique cross-platform software for cash registers. This project covers web development and cross-platform desktop development. Includes integration with hardware such as printer, scanner and PIN pad.',
+            'Replaced a team of 4 people and optimized B2C site support.',
+            'An entrance ticket verification system has been developed that can handle the largest events.',
+            'Developed new features in the React Native mobile application for political elections.'
         ]
     },
     {
         name: 'IT Academy',
         date: 'Jan 2022 - Sep 2022',
         description: [
-            '.NET course Mentor.'
+            '.NET course Mentor.',
+            'Taught students from scratch to Junior Full Stack Developer level. My students now work in banks, startups and big tech companies.'
         ]
     },
     {
-        name: 'LogiSense Ltd',
-        date: 'Nov 2021 to present',
+        name: 'LLC FinanceSoft',
+        date: 'May 2021 - Nov 2021',
         description: [
-            'Full-Stack developer of tourism-focused Product Management System.',
-            'Team leader of the Cashier System.'
+            'Team leader of the automated testing of the Automated Banking System.',
+            'Designed and developed a remote identification system based on face and document recognition.'
         ]
     },
 ]
@@ -27,7 +31,7 @@ const work = [
 const education = [
     {
         name: 'Kyrgyz State Technical University',
-        date: 'Sep 2019 - Present',
+        date: 'Sep 2019 - Jun 2024',
         description: ['Information systems and technologies']
     },
     {
